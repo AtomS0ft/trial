@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"less.compile": {
+			//"compress":  true,  // true => remove surplus whitespace
+			//"sourceMap": true,  // true => generate source maps (.css.map files)
+			"out":"../style.css", // false => DON'T output .css files (overridable per-file, see below)
+			"main": "style.less",
+			"autoprefixer": "> 5%, last 2 Chrome versions, not ie 6-9"
+		}
+	}
+}

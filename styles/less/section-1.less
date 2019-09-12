@@ -1,0 +1,231 @@
+.section-1{    
+    .row();
+    justify-content: end;
+    .lg-block({
+       //display: block;  
+       justify-content: center;
+
+    });
+    &__content{
+        position: relative;
+        max-width: 520px;
+        margin-left: auto; 
+        padding: 0 10px;
+        
+        .xs-block({
+            display: flex;
+            justify-content: center;    
+            flex-wrap: wrap;
+        });
+        .lg-block({
+
+        });
+
+
+        .top-icons{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            &__row{
+                margin-top: 10px;
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                justify-content: center;
+            }
+            &__icon1{
+                .sprite2();
+                width: 206px;
+                height: 66px;
+                background-position: -382px -135px;
+                .xs-block({
+                     //.scale(206px, 66px, -382px, -135px, 991px, 50px);   
+                });
+            }
+            &__icon2{
+                .sprite3();
+                margin:0 30px;
+                width: 205px;
+                height: 72px;
+                background-position: -1040px -175px;
+            }
+            &__icon3{
+                .sprite3();
+                width: 508px;
+                .xs-block({
+                    .scale(508px, 160px, -746px, -5px, 1259px, 360px);   
+                });
+                margin-top: 30px;
+                height: 160px;
+                background-position: -746px -5px;                
+            }
+        }
+        .text{
+            margin-left: 40px;
+            font-size: 18px;
+        }
+        ul{
+            margin-top: 50px;
+            margin-left: 40px;
+            .xs-block({
+                font-size: 18px;
+                margin-top: 20px;
+            });
+            li{
+                .sprite2();
+                width: auto;
+                height: auto;
+                padding: 0 0 0 31px;
+                font-weight: 600;
+                font-size: 25px;
+                line-height: 25px;
+                color: #263238;
+                text-align: left;
+                margin: 17px 0 0;
+                letter-spacing: -1px;
+                background-position: -771px -213px;
+                .xs-block({
+                    font-size: 20px;
+                    line-height: 20px;                        
+                });
+                span {
+                    color: #01a16a;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        .btm-icon-1{
+            .sprite3();
+            width: 614px;
+            height: 89px;
+            background-position: -122px -78px;
+            margin-left: -150px;
+            margin-top:80px;
+            .xs-block({
+                .scale(614px, 89px, -122px, -78px, 1259px, 360px);  
+                margin-top:20px;            
+            });
+        }
+        .btm-icon-2{
+            .sprite2();
+            width: 412px;
+            height: 60px;
+            background-position: -385px -421px;
+            margin: 20px 0;
+            .xs-block({
+                .scale(412px, 60px, -385px, -421px, 991px, 360px);
+            });
+        }
+        .bottle{
+            position: absolute;
+            z-index: 50;
+            bottom: 0;
+            left: -320px;
+            bottom: 50px;
+            .xs-block({
+                //margin-left: -600px;  
+                margin-top: 50px;
+                bottom:50px;
+                width: 300px;
+                left: -50px;           
+                position: static;                
+            }); 
+        }
+        .background{
+            position: absolute;
+            .sprite-section1__content();
+            width: 687px;
+            height: 721px;
+            z-index: -100;
+            left: -480px; 
+            top: 0;
+            .xs-block({
+                //margin-left: -600px; 
+                background-size: 500px;
+                //width: 400px; 
+                top:300px;
+                left: -200px;           
+                //position: absolute;
+                //bottom: 0;
+            });          
+        }
+    
+
+    }
+    &__form{
+        position: relative;
+        width: 307px;
+        //.col(4);
+        .background{
+            .sprite-section1__form();
+            height: 721px;
+            width: 809px;
+            position: absolute;
+            left: -244px;
+            top:0;
+            z-index: -100;
+        }
+        .exoffer{
+            height: 36px;
+            margin: 25px 10px;
+            p{
+                font-size: 17px;
+                line-height: 17px;
+                color: #242424;
+                text-align: left;
+                padding: 0 0 0 62px;
+            }
+        }
+        .form{
+            padding-bottom: 15px;
+            //width: 100
+            background: #069852;
+            border-radius: 5px 5px 0 0;
+
+
+            .partialform input {
+                float: left;
+                width: 150px;
+                height: 35px;
+                border: 1px solid #CCCCCC;
+                margin-bottom: 7px;
+                padding: 0 5px;
+            }
+            .partialform label {
+                float: left;
+                width: 30%;
+                margin-top: 13px;
+                color: #fff;
+                font-family: arial;
+                text-align: right;
+                padding-right: 15px;
+            }
+            .partialform select {
+                float: left;
+                width: 162px;
+                height: 35px;
+                border: 1px solid #CCCCCC;
+                margin-bottom: 7px;
+            }
+            .error-message {
+                height: 32px;
+                display: none;
+                font-size: 14px;
+                color: #fff;
+                line-height: 32px;
+                white-space: nowrap;
+                padding: 0 10px;
+                margin: 0 35px 0 0;
+                position: absolute;
+                right: 100%;
+                top: 1px;
+                z-index: 99999;
+                border-radius: 3px 0 0 3px;
+                background: #EF4B52;
+            }
+            .form-holder {
+                position: relative;
+            }
+        }
+    }
+}

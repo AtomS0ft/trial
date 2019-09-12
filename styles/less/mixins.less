@@ -1,0 +1,63 @@
+.row(){
+    .row-flex();
+}
+.col(@def){
+    .col();
+    .size(@def);
+}
+//lg, md, sm, xs
+.col(@def, @md){
+    .col();
+    .size(@def);
+    .size-md(@md);    
+}
+
+.col(@def, @md, @sm) when (@md = 0){
+    .col();
+    .size(@def);    
+    .size-sm(@sm);    
+}
+.col(@def, @md, @sm) when (@md > 0){
+    .col();
+    .size(@def);
+    .size-md(@md);
+    .size-sm(@sm);    
+}
+
+.col(@def, @md, @sm, @xs) when (@md = 0) and (@sm = 0){
+     .col();
+     .size(@def);    
+     .size-xs(@xs);
+}
+
+.col(@def, @md, @sm, @xs) when (@md = 0) and (@sm > 0){
+    .col();
+    .size(@def);    
+    .size-sm(@sm);
+    .size-xs(@xs);
+}
+.col(@def, @md, @sm, @xs) when (@sm = 0) and (@md > 0){
+    .col();
+    .size(@def);
+    .size-md(@md);    
+    .size-xs(@xs);
+}
+.col(@def, @md, @sm, @xs) when (@sm > 0) and (@md > 0){
+    .col();
+    .size(@def);
+    .size-md(@md);
+    .size-sm(@sm);
+    .size-xs(@xs);
+}
+
+
+.font-face(@name, @filename, @path, @weight:normal, @style:normal) {
+	@font-face {
+        font-family: @name;
+        font-display: block;
+		src: url('@{path}@{filename}.eot');
+		src: local('☺'), url('@{path}@{filename}.woff') format('woff'), url('@{path}@{filename}.ttf') format('truetype'), url('@{path}@{filename}.svg') format('svg');
+		font-weight: @weight;
+		font-style: @style;
+    }
+}

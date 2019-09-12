@@ -1,0 +1,63 @@
+.reset();
+body{
+    font-family: "Hind", sans-serif;
+    font-size: 12px;
+    line-height: 24px;
+    color: #2d2d2d;
+}
+
+.wrapper{
+    .wrapper();
+}
+
+.topbar{
+    min-height: 29px;
+    background: #ff0000;
+    &__text{
+        font-size: 18px;
+        line-height: 27px;
+        padding: 2px 0 0;
+        color: #fff;
+        text-align: center;
+        span{
+            font-weight: 700;
+            color: #fff600;
+        }
+    }
+}
+
+@img: "../img/";
+
+.sprite(){
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite1(){
+    background-image: url("@{img}spritesheet1.png");
+    .sprite();
+}
+.sprite2(){
+    background-image: url("@{img}spritesheet2.png");
+    .sprite();
+}
+.sprite3(){
+    background-image: url("@{img}spritesheet3.png");
+    .sprite();
+}
+.sprite-section1__form(){
+    background-image: url("@{img}section1__form.jpg");
+    .sprite();
+}
+.sprite-section1__content(){
+    background-image: url("@{img}section1__content.jpg");
+    .sprite();
+}
+
+.scale(@w, @h, @left, @top, @imgw, @new-w){
+    @scale: @new-w/@w;
+    width: @new-w;
+    height: @scale*@h;
+    background-size: @scale*@imgw;
+    background-position: @scale*@left @scale*@top; 
+}
