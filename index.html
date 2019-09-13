@@ -7,6 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="/img/fav.ico" type="image/x-icon">
     <link rel="stylesheet" href="/styles/style.css">
+    <script src="/js/lib/jquery.min.js" type="text/javascript"></script>
+    <script src="/js/lib/jquery.mask.min.js" type="text/javascript"></script>
+    <script src="/js/lib/jquery.validate.js" type="text/javascript"></script>
+    <script src="/js/countries_states_EN.js" type="text/javascript"></script>
+    <script src="/js/countries_states_handler.js" type="text/javascript"></script>
     <link href="https://fonts.googleapis.com/css?family=Hind:400,500,600,700&amp;display=swap" rel="stylesheet">
     <title>CBD Oil - Home</title>
 </head>
@@ -48,29 +53,29 @@
             <div class="section-1__form">
                     <i class="background"></i>
                     <div class="exoffer">
-                        <i style="float:left;">
-                            <img class="headerFlag" style="width: 47px;margin-top: 4px;" src="/img/flag-US.png" alt="">
+                        <i>
+                            <img src="/img/flag-US.png" alt="">
                         </i>
-                        <p class="exof-txt">Internet Exclusive Offer<br>
+                        <p>Internet Exclusive Offer<br>
                             <b>Available to United States Residents Only</b></p>
                     </div>
                     <div class="form" id="topfrm">
                         <a id="form" name="form"></a>
-                        <div class="sldrtxt" id="fades">
+                        <div class="blinked" id="fades">
                             <div class="aggettivi">
                                 <div class="text-animated-one">
-                                    <i class="sprite2 sprite-eye"></i> 13 others are viewing this offer right now!
+                                    <i></i> 13 others are viewing this offer right now!
                                 </div>
                                 <div class="text-animated-two">
-                                    <i class="sprite2 sprite-eye"></i> 25 people purchased this in the last hour
+                                    <i></i> 25 people purchased this in the last hour
                                 </div>
                             </div>
                         </div>
-                        <div class="frmhdr sprite2 sprite-frmhdr">
-                            <p class="frmhd-txt">TELL US WHERE TO SEND<br>
+                        <div class="form-header">
+                            <p>TELL US WHERE TO SEND<br>
                                 <span>Your Bottle Today!</span></p>
                         </div>
-                        <form action="/cbd/any/desktop/order" id="partialform" class="order-form re partialform" method="post" role="form" novalidate="novalidate">
+                        <form action="#" id="partialform" class="partialform" method="post" role="form" novalidate="novalidate">
                             <div class="form-holder">
                                 <label>First Name:</label>
                                 <input type="text" name="FirstName" placeholder="First Name" class="form-control first-name" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
@@ -129,17 +134,150 @@
                             </div>
 
                             <div id="rushtop">
-                                <input src="images/home-form-btn.png" id="partialsubmitbutton" name="partialsubmitbutton" type="image" onclick="ShowExitPopup = false;" style="background-color:transparent;" class="pulsebutton">
+                                <input src="/img/home-form-btn.png" id="partialsubmitbutton" name="partialsubmitbutton" type="image" onclick="ShowExitPopup = false;" style="background-color:transparent;" class="pulsebutton">
 
                             </div>
                         </form>
                         <div>
-                            <i class="s1logos sprite3 sprite-s1logos"></i>
+                            <i class="form-logo"></i>
                         </div>
                     </div>
                 </div>
         </section>
+        <section class="section-2">
+            <p class="section-2__header"><span>Pure CBD Oil</span><br>
+                Enriched with Cannabidiol Extract (CBD)</p><i class="section-2__line"></i>
+            <p class="section-2__text">Cannabidiol, part of a family of molecules called cannabinoids, is non-psychoactive and has been clinically proven to offer a wide range of therapeutic health benefits. <strong>Pure CBD Oil</strong> is formulated with organic hemp, grown &amp; harvested in the US, and is patented (under Patent #6,630,507) to support our bodies as we age.<br>
+                <br>
+                <b>When used as directed, Pure CBD Oil regulates mood patterns and sleep cycle, mitigates inflammatory response, and boosts cognitive performance.</b></p>
+            <p class="section-2__header2">All Natural Organic CBD Extract</p>
+            <p class="section-2__header3">Quick Absorption, Extended Release Formula</p>
+            <ul>
+                <li>
+                    <i class="icon1"></i>
+                    <p><span>Legal</span><br>
+                        In All 50<br>
+                        US States</p><i class="line"></i>
+                </li>
+                <li>
+                    <i class="icon2"></i>
+                    <p><span>100%</span><br>
+                        THC Free<br>
+                        &amp; No High</p><i class="line"></i>
+                </li>
+                <li>
+                    <i class="icon3"></i>
+                    <p><span>Doesn't</span><br>
+                        Show On<br>
+                        Drug test</p><i class="line"></i>
+                </li>
+                <li>
+                    <i class="icon4"></i>
+                    <p><span>Available</span><br>
+                        Without Prescription</p><i class="line"></i>
+                </li>
+            </ul>
+            <img alt="" class="bottle" src="/img/s2bottle.png">
+        </section>
+        <section>
+            <div style="height: 1000px;text-align: center;background: #ccc;font-size: 30px; padding: 50px">next section</div>
+        </section>
     </div>
+    <span class="safe-buy" style="display: inline; padding: 0px; margin: 0px; border: 0px; position: fixed; bottom: 0px; top: auto; right: auto; left: 0px; z-index: 10001; background-color: transparent; height: auto; width: auto;"><img border="0" src="/img/safe321.png" style="vertical-align: bottom;"></span>
+    <script src="/js/scripts.js"></script>
+    <script src="/js/commonJs.js"></script>
+    <script src="/js/getdetector.js"></script>
+    <script type="text/javascript">
+
+
+        var error_scroll = false;
+        var order_form_selector = '#partialform';
+      
+        $(document).ready(function() {
+      
+          $('.special').delay(1000).slideDown('slow', function() {
+          });
+          $('.icon-close').on('click', function() {
+            $('.special').slideUp('slow', function() {
+            });
+          });
+          jQuery(window).on('scroll', function() {
+            jQuery('[autofocus]').blur();
+          });
+      
+          $(order_form_selector).submit(function() {
+            show_exit = false;
+          });
+      
+          $(order_form_selector).validate({
+      
+            submitHandler: function(form) {
+              show_exit = false;
+      
+              $('.popup-loading-wrapper').show();
+              $(order_form_selector).trigger('analytics:submit');
+              setTimeout(function() {
+                form.submit();
+              }, 2000);
+      
+            },
+            invalidHandler: function(event, validator) {
+      
+              error_scroll = true;
+              show_exit = true;
+              var errors = validator.numberOfInvalids();
+              if (errors) {
+      
+                $.each($(order_form_selector).find('.form-holder'), function(index, elem) {
+                  $(elem).removeClass('has-error').addClass('accept');
+                  $(elem).find('input').removeClass('error');
+                });
+      
+              } else {
+                show_exit = false;
+              }
+            },
+            errorPlacement: function(error, element) {
+      
+              if ($(element).hasClass('error')) {
+                $(element).closest('div[class^="form-holder"]').addClass('has-error').removeClass('accept');
+                $(element).addClass('error');
+                if (error_scroll) {
+                  $('html, body').animate({
+                    scrollTop: $(element).offset().top - 90,
+                  }, 500);
+                  error_scroll = false;
+                }
+              } else {
+                $(element).closest('div[class^="form-holder"]').removeClass('has-error').addClass('accept');
+                $(element).removeClass('error');
+              }
+            },
+            success: function(label) {
+            },
+            rules: {
+              FirstName: 'required',
+              LastName: 'required',
+              BillAddress: 'required',
+              BillCity: 'required',
+              BillCountry: 'required',
+              BillState: 'required',
+              BillZip: 'required',
+              HomePhone: {
+                required: true,
+                minlength: 10,
+                maxlength: 20,
+              },
+              EmailAddress: {
+                required: true,
+                email: true
+              },
+            },
+          });
+      
+        });
+      
+      </script>
 </body>
 
 </html>

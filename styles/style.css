@@ -104,13 +104,13 @@ body {
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 @media screen and (max-width: 780px) {
   .wrapper {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 .topbar {
@@ -132,10 +132,11 @@ body {
   display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
-  margin-left: -15px;
-  margin-right: -15px;
+  margin-left: 0px;
+  margin-right: 0px;
   -webkit-box-pack: end;
           justify-content: end;
+  overflow: hidden;
 }
 @media screen and (max-width: 1100px) {
   .section-1 {
@@ -323,6 +324,7 @@ body {
 .section-1__form {
   position: relative;
   width: 307px;
+  padding-right: 20px;
 }
 .section-1__form .background {
   background-image: url("../img/section1__form.jpg");
@@ -330,14 +332,25 @@ body {
   display: block;
   height: 721px;
   width: 809px;
-  position: absolute;
   left: -244px;
+  position: absolute;
   top: 0;
   z-index: -100;
 }
 .section-1__form .exoffer {
-  height: 36px;
   margin: 25px 10px;
+}
+.section-1__form .exoffer::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.section-1__form .exoffer i {
+  float: left;
+}
+.section-1__form .exoffer i img {
+  width: 47px;
+  margin-top: 4px;
 }
 .section-1__form .exoffer p {
   font-size: 17px;
@@ -358,6 +371,7 @@ body {
   border: 1px solid #CCCCCC;
   margin-bottom: 7px;
   padding: 0 5px;
+  font-size: 13.3333px;
 }
 .section-1__form .form .partialform label {
   float: left;
@@ -367,6 +381,7 @@ body {
   font-family: arial;
   text-align: right;
   padding-right: 15px;
+  font-size: 13.3333px;
 }
 .section-1__form .form .partialform select {
   float: left;
@@ -374,6 +389,10 @@ body {
   height: 35px;
   border: 1px solid #CCCCCC;
   margin-bottom: 7px;
+  font-size: 13.3333px;
+}
+.section-1__form .form .has-error .error-message {
+  display: block;
 }
 .section-1__form .form .error-message {
   height: 32px;
@@ -391,6 +410,321 @@ body {
   border-radius: 3px 0 0 3px;
   background: #EF4B52;
 }
+@media screen and (max-width: 560px) {
+  .section-1__form .form .error-message {
+    right: 175px;
+    font-size: 10px;
+  }
+}
+.section-1__form .form .error-message::after {
+  content: '';
+  width: 0;
+  height: 0;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -10px;
+  border-top: 16px solid transparent;
+  border-left: 10px solid #EF4B52;
+  border-bottom: 16px solid transparent;
+}
+.section-1__form .form .blinked {
+  font-size: 15px;
+  line-height: 33px;
+  color: #fff;
+  text-align: center;
+  height: 33px;
+  padding: 3px 0 0;
+}
+.section-1__form .form .blinked .aggettivi {
+  display: inline;
+}
+.section-1__form .form .blinked .aggettivi i {
+  background-image: url("../img/spritesheet2.png");
+  background-repeat: no-repeat;
+  display: block;
+  margin: 0 3px -1px 0;
+  display: inline-block;
+  width: 22px;
+  height: 13px;
+  background-position: -191px -135px;
+}
+.section-1__form .form .blinked .aggettivi .text-animated-one {
+  display: inline;
+  position: relative;
+  top: 0;
+  -webkit-animation: fade-in 4s infinite;
+          animation: fade-in 4s infinite;
+}
+.section-1__form .form .blinked .aggettivi .text-animated-two {
+  opacity: 0;
+  display: inline;
+  position: relative;
+  margin-left: -294px;
+  -webkit-animation: fade-in 4s infinite;
+          animation: fade-in 4s infinite;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 1;
+    top: 0;
+  }
+  to {
+    opacity: 0;
+    top: 0;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 1;
+    top: 0;
+  }
+  to {
+    opacity: 0;
+    top: 0;
+  }
+}
+.section-1__form .form .pulse {
+  -webkit-animation-name: pulse;
+          animation-name: pulse;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    opacity: 0.9;
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    opacity: 0.9;
+  }
+}
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    opacity: 0.9;
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    opacity: 0.9;
+  }
+}
+.section-1__form .form .form-header {
+  background-image: url("../img/spritesheet2.png");
+  background-repeat: no-repeat;
+  display: block;
+  width: 308px;
+  height: 78px;
+  background-position: -5px -297px;
+  margin: 0 0 14px;
+}
+.section-1__form .form .form-header p {
+  font-size: 26px;
+  line-height: 28px;
+  text-shadow: 1px 1px #786c40;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding: 12px 0 0;
+}
 .section-1__form .form .form-holder {
   position: relative;
+}
+.section-1__form .form .form-holder::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.section-1__form .form .form-holder .error {
+  border: 1px solid red !important;
+}
+.section-1__form .form #partialsubmitbutton {
+  float: none;
+  width: 261px;
+  height: 82px;
+  border: 0px;
+  margin: 5px auto;
+  display: block;
+  -webkit-animation-name: pulse;
+          animation-name: pulse;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.section-1__form .form .form-logo {
+  background-image: url("../img/spritesheet3.png");
+  background-repeat: no-repeat;
+  display: block;
+  width: 284px;
+  height: 45px;
+  background-position: -746px -175px;
+  margin: 17px 0 0 10px;
+}
+.section-2 {
+  background: url("../img/section2.jpg") center top no-repeat;
+  padding: 0 10px;
+  position: relative;
+}
+@media screen and (max-width: 560px) {
+  .section-2 {
+    background-position: -920px;
+  }
+}
+.section-2__header {
+  font-weight: 600;
+  font-size: 33px;
+  line-height: 44px;
+  color: #395761;
+  text-align: left;
+  letter-spacing: -1px;
+  padding: 56px 0 0;
+}
+.section-2__header span {
+  background: -webkit-linear-gradient(#07d769, #036d3f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-size: 46px;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  vertical-align: middle;
+}
+.section-2__line {
+  background-image: url("../img/spritesheet3.png");
+  background-repeat: no-repeat;
+  display: block;
+  max-width: 603px;
+  height: 14px;
+  background-position: -5px -715px;
+  margin: 1px 0 0;
+}
+.section-2__text {
+  text-align: left;
+  padding: 12px 0 0;
+  max-width: 610px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #2d2d2d;
+}
+.section-2__header2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 30px;
+  color: #058a4e;
+  text-align: left;
+  padding: 33px 0 0;
+  letter-spacing: -1px;
+}
+.section-2__header3 {
+  min-height: 35px;
+  display: inline-block;
+  background: #395761;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 33px;
+  color: #fff;
+  text-align: center;
+  padding: 2px 14px 0 14px;
+  margin: 8px 0 0;
+  box-sizing: border-box;
+}
+.section-2 .bottle {
+  position: absolute;
+  left: 650px;
+  top: 217px;
+}
+@media screen and (max-width: 1100px) {
+  .section-2 .bottle {
+    display: none;
+  }
+}
+.section-2 ul {
+  padding: 25px 0 0;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 780px) {
+  .section-2 ul {
+    justify-content: space-around;
+  }
+}
+.section-2 ul li {
+  width: 170px;
+  box-sizing: border-box;
+}
+.section-2 ul li p {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+  color: #395761;
+  text-align: left;
+  text-transform: uppercase;
+  padding: 15px 0 0;
+}
+.section-2 ul li p span {
+  color: #069852;
+}
+.section-2 ul li .icon1 {
+  background-image: url("../img/spritesheet4.png");
+  background-repeat: no-repeat;
+  display: block;
+  width: 121px;
+  height: 141px;
+  background-position: -5px -5px;
+}
+.section-2 ul li .icon2 {
+  background-image: url("../img/spritesheet4.png");
+  background-repeat: no-repeat;
+  display: block;
+  width: 121px;
+  height: 141px;
+  background-position: -136px -5px;
+}
+.section-2 ul li .icon3 {
+  background-image: url("../img/spritesheet4.png");
+  background-repeat: no-repeat;
+  display: block;
+  width: 121px;
+  height: 141px;
+  background-position: -267px -5px;
+}
+.section-2 ul li .icon4 {
+  background-image: url("../img/spritesheet4.png");
+  background-repeat: no-repeat;
+  display: block;
+  width: 121px;
+  height: 141px;
+  background-position: -398px -5px;
+}
+.section-2 ul li .line {
+  background-image: url("../img/spritesheet4.png");
+  background-repeat: no-repeat;
+  display: block;
+  width: 132px;
+  height: 5px;
+  background-position: -529px -5px;
+  margin: 12px 0 0;
 }

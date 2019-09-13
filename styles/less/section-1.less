@@ -1,9 +1,11 @@
 .section-1{    
     .row();
     justify-content: end;
+    overflow: hidden;
     .lg-block({
        //display: block;  
        justify-content: center;
+       
 
     });
     &__content{
@@ -155,19 +157,26 @@
     &__form{
         position: relative;
         width: 307px;
-        //.col(4);
+        padding-right: 20px;
         .background{
             .sprite-section1__form();
             height: 721px;
             width: 809px;
-            position: absolute;
             left: -244px;
+            position: absolute;
             top:0;
             z-index: -100;
         }
         .exoffer{
-            height: 36px;
             margin: 25px 10px;
+            .clearfix();
+            i{
+                float: left;
+                img{ 
+                    width: 47px;
+                    margin-top: 4px;
+                }
+            }
             p{
                 font-size: 17px;
                 line-height: 17px;
@@ -190,6 +199,7 @@
                 border: 1px solid #CCCCCC;
                 margin-bottom: 7px;
                 padding: 0 5px;
+                font-size: 13.3333px;
             }
             .partialform label {
                 float: left;
@@ -199,6 +209,7 @@
                 font-family: arial;
                 text-align: right;
                 padding-right: 15px;
+                font-size: 13.3333px;
             }
             .partialform select {
                 float: left;
@@ -206,6 +217,10 @@
                 height: 35px;
                 border: 1px solid #CCCCCC;
                 margin-bottom: 7px;
+                font-size: 13.3333px;
+            }
+            .has-error .error-message {
+                display: block;
             }
             .error-message {
                 height: 32px;
@@ -218,13 +233,138 @@
                 margin: 0 35px 0 0;
                 position: absolute;
                 right: 100%;
+                .xs-block({
+                    right: 175px;
+                    font-size: 10px;
+                });
                 top: 1px;
                 z-index: 99999;
                 border-radius: 3px 0 0 3px;
                 background: #EF4B52;
+                &::after{
+                    content: '';
+                    width: 0;
+                    height: 0;
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: -10px;
+                    border-top: 16px solid transparent;
+                    border-left: 10px solid #EF4B52;
+                    border-bottom: 16px solid transparent;
+                }
+            }
+
+            .blinked {
+                font-size: 15px;
+                line-height: 33px;
+                color: #fff;
+                text-align: center;
+                height: 33px;
+                padding: 3px 0 0;
+                .aggettivi {
+                    display: inline;
+                    i {
+                        .sprite2();
+                        margin: 0 3px -1px 0;
+                        display: inline-block;
+                        width: 22px;
+                        height: 13px;
+                        background-position: -191px -135px;
+                    }
+                    .text-animated-one {
+                        display: inline;
+                        position: relative;
+                        top: 0;
+                        animation: fade-in 4s infinite; 
+                    }
+                    .text-animated-two {
+                        opacity: 0;
+                        display: inline;
+                        position: relative;
+                        margin-left: -294px;
+                        animation: fade-in 4s infinite;
+                        animation-delay: 2s;
+                    }
+                }
+            }
+            
+            @keyframes fade-in {
+                from {
+                    opacity: 1;
+                    top: 0;
+                }
+                to {
+                    opacity: 0;
+                    top: 0;
+                }
+            }
+
+            .pulse {
+                animation-name: pulse;
+                animation-duration: 1.5s;
+                animation-iteration-count: infinite;
+            }
+
+            @keyframes pulse {
+                0% {
+                    transform: scale(0.9);
+                    opacity: 0.9;
+                }
+            
+                50% {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            
+                100% {
+                    transform: scale(0.9);
+                    opacity: 0.9;
+                }
+            }
+
+            .form-header {
+                .sprite2();
+                width: 308px;
+                height: 78px;
+                background-position: -5px -297px;
+                margin: 0 0 14px;
+                p{
+                    font-size: 26px;
+                    line-height: 28px;
+                    text-shadow: 1px 1px #786c40;
+                    color: #fff;
+                    text-align: center;
+                    text-transform: uppercase;
+                    letter-spacing: -1px;
+                    padding: 12px 0 0;
+                }
             }
             .form-holder {
                 position: relative;
+                .clearfix();
+                .error {
+                    border: 1px solid red !important;
+                }
+            }
+
+            #partialsubmitbutton {
+                float: none;
+                width: 261px;
+                height: 82px;
+                border: 0px;
+                margin: 5px auto;
+                display: block;
+                animation-name: pulse;
+                animation-duration: 1.5s;
+                animation-iteration-count: infinite;
+            }
+            .form-logo{
+                .sprite3();
+                width: 284px;
+                height: 45px;
+                background-position: -746px -175px;
+                margin: 17px 0 0 10px;
             }
         }
     }
